@@ -7,7 +7,7 @@ upstream:
   git:
     repo: https://github.com/GoogleContainerTools/kpt
     directory: /package-examples/nginx
-    ref: v0.9
+    ref: v0.10
   updateStrategy: resource-merge
 upstreamLock:
   type: git
