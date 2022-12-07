@@ -19,7 +19,7 @@ steps:
       "--delivery-pipeline", "kpt-tech",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
-      "--images", "python-deployment=us-central1-docker.pkg.dev/adroit-nimbus-370411/tech/kpt-image:${SHORT_SHA}"
+      "--images", "kpt-tech=us-central1-docker.pkg.dev/adroit-nimbus-370411/tech/kpt-image:${SHORT_SHA}"
     ]
 options:
  logging: CLOUD_LOGGING_ONLY
