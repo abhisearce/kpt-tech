@@ -1,0 +1,10 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+#build:
+#  artifacts:
+#  - image: "python-deployment"
+#    context: config
+deploy:
+  kpt:
+    dir: 
+      k8s
