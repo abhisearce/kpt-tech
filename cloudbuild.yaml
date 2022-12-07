@@ -10,27 +10,13 @@ steps:
     ]
 
 
-# # Build and tag using commit sha
-# - name: 'gcr.io/cloud-builders/docker'
-#   args: ['build', '.', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/ci-repo/python-image:${COMMIT_SHA}', '-f', 'dockerfile']
-
-# - name: 'gcr.io/kaniko-project/executor:latest'
-#   args:
-#   - --destination='us-central1-docker.pkg.dev/$PROJECT_ID/ci-repo/python-image:${COMMIT_SHA}'
-#   - --cache=true
-#   - --cache-ttl=XXh
-
-# # Push the container image
-# - name: 'gcr.io/cloud-builders/docker'
-#   args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/ci-repo/python-image:${COMMIT_SHA}']
-
 # Create release in Google Cloud Deploy
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: gcloud
   args:
     [
       "deploy", "releases", "create", "rel-${SHORT_SHA}",
-      "--delivery-pipeline", "python",
+      "--delivery-pipeline", "kpt-tech",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
       "--images", "python-deployment=us-central1-docker.pkg.dev/adroit-nimbus-370411/tech/kpt-image:${SHORT_SHA}"
