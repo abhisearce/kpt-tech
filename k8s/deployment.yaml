@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-deploy-1
+  name: kpt-tech
 spec:
   selector:
     matchLabels:
-      app: python-deploy-1
+      app: kpt-tech
   template:
     metadata:
       labels:
-        app: python-deploy-1
+        app: kpt-tech
     spec:
       terminationGracePeriodSeconds: 5
       serviceAccountName: default
       containers:
-        - name: python-deploy-1
-          image: python-deployment
+        - name: kpt-tech
+          image: kpt-tech
           ports:
             - containerPort: 8080
           env:
