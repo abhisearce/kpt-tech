@@ -1,6 +1,0 @@
-apiVersion: kpt.dev/v1
-kind: Kptfile
-metadata:
-  name: search-replace-simple
-info:
-  description: kpt package
