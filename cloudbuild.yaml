@@ -6,7 +6,7 @@ steps:
       "--dockerfile=dockerfile",
       "--cache=true",
       "--cache-ttl=6h",
-      "--destination=us-central1-docker.pkg.dev/adroit-nimbus-370411/tech/kpt-image:${SHORT_SHA}"
+      "--destination=us-central1-docker.pkg.dev/adroit-nimbus-370411/kpt-tech/image:${SHORT_SHA}"
     ]
 
 
@@ -19,7 +19,7 @@ steps:
       "--delivery-pipeline", "kpt-tech",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
-      "--images", "kpt-tech=us-central1-docker.pkg.dev/adroit-nimbus-370411/tech/kpt-image:${SHORT_SHA}"
+      "--images", "kpt-tech=us-central1-docker.pkg.dev/adroit-nimbus-370411/kpt-tech/image:${SHORT_SHA}"
     ]
 options:
  logging: CLOUD_LOGGING_ONLY
