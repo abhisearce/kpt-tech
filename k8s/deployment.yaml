@@ -15,7 +15,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: kpt-tech-1
-          image: kpt-tech-1
+          image: kpt-tech
           ports:
             - containerPort: 8080
           env:
