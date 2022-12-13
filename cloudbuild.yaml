@@ -16,7 +16,7 @@ steps:
   args:
     [
       "deploy", "releases", "create", "rel-${SHORT_SHA}",
-      "--delivery-pipeline", "kpt-tech",
+      "--delivery-pipeline", "tech-kpt",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
       "--images", "kpt-tech=us-central1-docker.pkg.dev/adroit-nimbus-370411/kpt-tech/image:${SHORT_SHA}"
