@@ -15,5 +15,5 @@ metadata:
   name: production
 description: Production Environment deployment
 gke:
-  cluster: projects/adroit-nimbus-370411/locations/us-central1/clusters/tech-kpt    
+  cluster: projects/adroit-nimbus-370411/locations/us-central1/clusters/tech   
   
